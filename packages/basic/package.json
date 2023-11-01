@@ -6,7 +6,8 @@
     "build": "rollup --bundleConfigAsCjs --config rollup.config.js"
   },
   "devDependencies": {
-    "rollup": "^4.2.0"
+    "rollup": "^4.2.0",
+    "rollup-plugin-delete": "^2.0.0"
   },
   "dependencies": {
     "big.js": "^6.2.1"

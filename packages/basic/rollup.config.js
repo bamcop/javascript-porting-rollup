@@ -1,6 +1,7 @@
 // rollup.config.js
 // https://www.rollupjs.com/command-line-interface/#config-intellisense
 import { defineConfig } from 'rollup'
+import del from 'rollup-plugin-delete'
 import path from 'path'
 
 const src_dir = path.join(__dirname, 'src')
@@ -20,7 +21,10 @@ export default defineConfig({
             }
             return undefined
         }
-    },  
+    },
+    plugins: [
+        del({ targets: 'dist/*' })
+    ],
 })
 
 /**
